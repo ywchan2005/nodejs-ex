@@ -63,8 +63,7 @@ app.param('month', function (month) {
 	return !isNaN(parseInt(month)) && month >= 1 && month <= 12;
 });
 
-
-var responseOK = function (req, res) {
+var responseOk = function (req, res) {
 	res.writeHead(200);
 	res.end();
 };
