@@ -63,6 +63,14 @@ app.param('month', function (month) {
 	return !isNaN(parseInt(month)) && month >= 1 && month <= 12;
 });
 
+
+var responseOK = function (req, res) {
+	res.writeHead(200);
+	res.end();
+};
+app.get('/', responseOk);
+app.get('/health', responseOk);
+
 //app.get('/', function (req, res) {
 //  // try to initialize the db on every request if it's not already
 //  // initialized.
