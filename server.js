@@ -3,9 +3,9 @@ var express = require('express'),
     app     = express(),
     morgan  = require('morgan');
     
-//Object.assign=require('object-assign')
+Object.assign=require('object-assign')
 
-app.engine('html', require('ejs').renderFile);
+//app.engine('html', require('ejs').renderFile);
 app.use(morgan('combined'))
 
 var port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080,
