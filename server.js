@@ -70,6 +70,12 @@ var responseOk = function (req, res) {
 app.get('/', responseOk);
 app.get('/health', responseOk);
 
+app.get('/:version/:city/:year/:month', function (req, res) {
+	var headerJson = JSON.stringify({ v: dataVersion });
+	res.send(headerJson + "\n" + resultJson);
+	return;
+});
+
 //app.get('/', function (req, res) {
 //  // try to initialize the db on every request if it's not already
 //  // initialized.
