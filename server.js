@@ -5,6 +5,8 @@ var express = require('express'),
     
 Object.assign=require('object-assign')
 
+const dataVersion = "0.1";
+
 //app.engine('html', require('ejs').renderFile);
 app.use(morgan('combined'))
 
