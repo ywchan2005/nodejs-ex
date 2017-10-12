@@ -74,7 +74,7 @@ app.get('/health', responseOk);
 
 app.get('/:version/:city/:year/:month', function (req, res) {
 	var headerJson = JSON.stringify({ v: dataVersion });
-	res.send(headerJson + "\n" + resultJson);
+	res.send(headerJson);// + "\n" + resultJson);
 	return;
 });
 
